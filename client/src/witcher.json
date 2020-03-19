@@ -1,0 +1,1493 @@
+[
+  {
+    "id": 1942,
+    "artworks": [
+      {
+        "id": 142,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/wljha2ztkh9uuoq3vqvr.jpg",
+        "width": 1200
+      },
+      {
+        "id": 143,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/focpusrcrxothhcspvva.jpg",
+        "width": 1200
+      },
+      {
+        "id": 144,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/noyr6v8gapsogymbwgc8.jpg",
+        "width": 1200
+      },
+      {
+        "id": 145,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/lvtyjjjuouwq3wbgmoom.jpg",
+        "width": 1100
+      },
+      {
+        "id": 146,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/dvyikxjxejnkhjaofzmt.jpg",
+        "width": 1260
+      },
+      {
+        "id": 147,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/pj5z48so48o73xqqzbfp.jpg",
+        "width": 1200
+      },
+      {
+        "id": 148,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/xblqrzuujkvqniqxyxuu.jpg",
+        "width": 1200
+      },
+      {
+        "id": 149,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/nzx7paeacyvpviji6022.jpg",
+        "width": 1200
+      },
+      {
+        "id": 150,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/p6lhjientc4g7rnq6mhs.jpg",
+        "width": 1200
+      },
+      {
+        "id": 901,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/azw3q6ggnru4hwmlansb.jpg",
+        "width": 4069
+      },
+      {
+        "id": 1146,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/tlmn8xicoz0j7j2ahxvy.jpg",
+        "width": 7133
+      },
+      {
+        "id": 1147,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/pwhylsl5nx0bgj5lz2ok.jpg",
+        "width": 10000
+      },
+      {
+        "id": 1148,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/rwznddfodf1x5mmj8zva.jpg",
+        "width": 10681
+      }
+    ],
+    "collection": 62,
+    "cover": {
+      "id": 89386,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 1942,
+      "height": 1559,
+      "image_id": "co1wyy",
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.jpg",
+      "width": 1170
+    },
+    "first_release_date": 1431993600,
+    "game_modes": [
+      {
+        "id": 1,
+        "created_at": 1298937600,
+        "name": "Single player",
+        "slug": "single-player",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/single-player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "created_at": 1297555200,
+        "name": "Role-playing (RPG)",
+        "slug": "role-playing-rpg",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/role-playing-rpg"
+      },
+      {
+        "id": 31,
+        "created_at": 1323561600,
+        "name": "Adventure",
+        "slug": "adventure",
+        "updated_at": 1323561600,
+        "url": "https://www.igdb.com/genres/adventure"
+      }
+    ],
+    "name": "The Witcher 3: Wild Hunt",
+    "platforms": [
+      {
+        "id": 6,
+        "abbreviation": "PC",
+        "alternative_name": "mswin",
+        "category": 4,
+        "created_at": 1297555200,
+        "name": "PC (Microsoft Windows)",
+        "platform_logo": 203,
+        "slug": "win",
+        "updated_at": 1470009600,
+        "url": "https://www.igdb.com/platforms/win",
+        "versions": [
+          1,
+          13,
+          14,
+          15,
+          124
+        ],
+        "websites": [
+          2
+        ]
+      },
+      {
+        "id": 48,
+        "abbreviation": "PS4",
+        "alternative_name": "PS4",
+        "category": 1,
+        "created_at": 1326499200,
+        "generation": 8,
+        "name": "PlayStation 4",
+        "platform_logo": 231,
+        "product_family": 1,
+        "slug": "ps4--1",
+        "summary": "The PlayStation 4 system opens the door to an incredible journey through immersive new gaming worlds and a deeply connected gaming community. PS4 puts gamers first with an astounding launch line-up and over 180 games in development. Play amazing top-tier blockbusters and innovative indie hits on PS4. Developer inspired, gamer focused.",
+        "updated_at": 1433116800,
+        "url": "https://www.igdb.com/platforms/ps4--1",
+        "versions": [
+          17,
+          178,
+          179
+        ],
+        "websites": [
+          11
+        ]
+      },
+      {
+        "id": 49,
+        "abbreviation": "XONE",
+        "alternative_name": "Xbone",
+        "category": 1,
+        "created_at": 1326499200,
+        "generation": 8,
+        "name": "Xbox One",
+        "product_family": 2,
+        "slug": "xboxone",
+        "summary": "Welcome to a new generation of games and entertainment. Where games push the boundaries of realism. And television obeys your every command. Where listening to music while playing a game is a snap. And you can jump from TV to movies to music to a game in an instant. Where your experience is custom tailored to you. And the entertainment you love is all in one place. Welcome to the all-in-one, Xbox One",
+        "updated_at": 1429920000,
+        "url": "https://www.igdb.com/platforms/xboxone",
+        "versions": [
+          78,
+          180,
+          185,
+          188
+        ],
+        "websites": [
+          12
+        ]
+      }
+    ],
+    "slug": "the-witcher-3-wild-hunt",
+    "storyline": "The Witcher 3: Wild Hunt concludes the story of the witcher Geralt of Rivia, the series' protagonist, whose story to date has been covered in the previous installments. Geralt's new mission comes in dark times as the mysterious and otherworldly army known as the Wild Hunt invades the Northern Kingdoms, leaving only blood soaked earth and fiery ruin in its wake; and it seems the Witcher is the key to stopping their cataclysmic rampage.",
+    "summary": "The Witcher: Wild Hunt is a story-driven, next-generation open world role-playing game set in a visually stunning fantasy universe full of meaningful choices and impactful consequences. In The Witcher you play as the professional monster hunter, Geralt of Rivia, tasked with finding a child of prophecy in a vast open world rich with merchant cities, viking pirate islands, dangerous mountain passes, and forgotten caverns to explore.",
+    "time_to_beat": {
+      "id": 1942,
+      "completely": 525310,
+      "hastly": 117397,
+      "normally": 258072
+    },
+    "url": "https://www.igdb.com/games/the-witcher-3-wild-hunt",
+    "websites": [
+      {
+        "id": 19101,
+        "category": 2,
+        "game": 1942,
+        "trusted": false,
+        "url": "http://witcher.wikia.com/wiki/The_Witcher_3:_Wild_Hunt"
+      },
+      {
+        "id": 19102,
+        "category": 3,
+        "game": 1942,
+        "trusted": true,
+        "url": "https://en.wikipedia.org/wiki/The_Witcher_3:_Wild_Hunt"
+      },
+      {
+        "id": 19103,
+        "category": 4,
+        "game": 1942,
+        "trusted": true,
+        "url": "https://www.facebook.com/CDPROJEKTRED"
+      },
+      {
+        "id": 19104,
+        "category": 5,
+        "game": 1942,
+        "trusted": true,
+        "url": "https://twitter.com/witchergame"
+      },
+      {
+        "id": 19105,
+        "category": 8,
+        "game": 1942,
+        "trusted": true,
+        "url": "https://www.instagram.com/cdpred"
+      },
+      {
+        "id": 19106,
+        "category": 9,
+        "game": 1942,
+        "trusted": true,
+        "url": "https://www.youtube.com/user/WitcherGame"
+      },
+      {
+        "id": 19107,
+        "category": 13,
+        "game": 1942,
+        "trusted": true,
+        "url": "https://store.steampowered.com/app/292030"
+      },
+      {
+        "id": 41185,
+        "category": 6,
+        "game": 1942,
+        "trusted": true,
+        "url": "https://www.twitch.tv/cdprojektred"
+      },
+      {
+        "id": 66471,
+        "category": 1,
+        "game": 1942,
+        "trusted": false,
+        "url": "http://www.thewitcher.com"
+      },
+      {
+        "id": 78076,
+        "category": 14,
+        "game": 1942,
+        "trusted": true,
+        "url": "https://www.reddit.com/r/witcher"
+      },
+      {
+        "id": 119948,
+        "category": 17,
+        "game": 1942,
+        "trusted": true,
+        "url": "https://www.gog.com/game/the_witcher_3_wild_hunt"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "collection": 62,
+    "cover": {
+      "id": 90429,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 80,
+      "height": 967,
+      "image_id": "co1xrx",
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xrx.jpg",
+      "width": 725
+    },
+    "first_release_date": 1193356800,
+    "game_modes": [
+      {
+        "id": 1,
+        "created_at": 1298937600,
+        "name": "Single player",
+        "slug": "single-player",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/single-player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "created_at": 1297555200,
+        "name": "Role-playing (RPG)",
+        "slug": "role-playing-rpg",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/role-playing-rpg"
+      }
+    ],
+    "name": "The Witcher",
+    "platforms": [
+      {
+        "id": 6,
+        "abbreviation": "PC",
+        "alternative_name": "mswin",
+        "category": 4,
+        "created_at": 1297555200,
+        "name": "PC (Microsoft Windows)",
+        "platform_logo": 203,
+        "slug": "win",
+        "updated_at": 1470009600,
+        "url": "https://www.igdb.com/platforms/win",
+        "versions": [
+          1,
+          13,
+          14,
+          15,
+          124
+        ],
+        "websites": [
+          2
+        ]
+      },
+      {
+        "id": 14,
+        "abbreviation": "Mac",
+        "alternative_name": "Mac OS",
+        "category": 4,
+        "created_at": 1297641600,
+        "name": "Mac",
+        "platform_logo": 100,
+        "slug": "mac",
+        "updated_at": 1394236800,
+        "url": "https://www.igdb.com/platforms/mac",
+        "versions": [
+          45,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151
+        ],
+        "websites": [
+          5
+        ]
+      }
+    ],
+    "slug": "the-witcher",
+    "storyline": "The game begins when Geralt of Rivia, one of a few remaining \"witchers\" – traveling monster hunters for hire, gifted with unnatural powers, is transported to the witcher stronghold of Kaer Morhen by fellow witchers who had discovered him unconscious in a field. Geralt remembers almost nothing of his life before that point. He is taken to Kaer Morhen, the base of the witchers, where he meets a sorceress named Triss Merigold. The castle is attacked by a gang of bandits named Salamandra, led by a criminal known as the Professor, a mage named Savolla who controls a large, praying mantis-like monster, and another mage named Azar Javed. The witchers and the sorceress manage to slay the monster and kill Savolla, but the Professor and Azar manage to escape with the mutagens that genetically alter the witchers. After curing Triss of the wounds she received while fighting Javed, Geralt and the rest of the witchers head off in different directions in order to find information on Salamandra.",
+    "summary": "Being based on a novel series by Andrzej Sapkowski – a bestselling Polish author – gives the game’s universe and characters credibility, authority and exceptional cohesiveness. In this harsh fantasy world abstract, absolute and unconditional ideas such as “Good” and “Evil” written in upper case letters do not exist. Instead, however, while moral good exists , the protagonist will often only have a choice between two evils, deciding on the path which he regards as the lesser evil of the two. The game also features an innovative, time delayed decision-consequence system, prodding players to make their decisions seriously and with thought.",
+    "time_to_beat": {
+      "id": 80,
+      "completely": 313200,
+      "hastly": 90000,
+      "normally": 214800
+    },
+    "url": "https://www.igdb.com/games/the-witcher",
+    "websites": [
+      {
+        "id": 18169,
+        "category": 1,
+        "game": 80,
+        "trusted": false,
+        "url": "http://thewitcher.com/witcher1/"
+      },
+      {
+        "id": 18171,
+        "category": 3,
+        "game": 80,
+        "trusted": true,
+        "url": "https://en.wikipedia.org/wiki/The_Witcher_(video_game)"
+      },
+      {
+        "id": 18172,
+        "category": 4,
+        "game": 80,
+        "trusted": true,
+        "url": "https://www.facebook.com/thewitcher"
+      },
+      {
+        "id": 18173,
+        "category": 5,
+        "game": 80,
+        "trusted": true,
+        "url": "https://twitter.com/witchergame"
+      },
+      {
+        "id": 18174,
+        "category": 9,
+        "game": 80,
+        "trusted": true,
+        "url": "https://www.youtube.com/user/WitcherGame"
+      },
+      {
+        "id": 18175,
+        "category": 13,
+        "game": 80,
+        "trusted": true,
+        "url": "https://store.steampowered.com/app/20900"
+      },
+      {
+        "id": 103800,
+        "category": 2,
+        "game": 80,
+        "trusted": false,
+        "url": "https://witcher.fandom.com/wiki/The_Witcher_(game)"
+      }
+    ]
+  },
+  {
+    "id": 128539,
+    "name": "The Witcher 3: Wild Hunt",
+    "slug": "the-witcher-3-wild-hunt--1",
+    "url": "https://www.igdb.com/games/the-witcher-3-wild-hunt--1"
+  },
+  {
+    "id": 9689,
+    "collection": 62,
+    "cover": {
+      "id": 75195,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 9689,
+      "height": 1200,
+      "image_id": "co1m0r",
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1m0r.jpg",
+      "width": 900
+    },
+    "first_release_date": 1421884800,
+    "game_modes": [
+      {
+        "id": 1,
+        "created_at": 1298937600,
+        "name": "Single player",
+        "slug": "single-player",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/single-player"
+      },
+      {
+        "id": 2,
+        "created_at": 1298937600,
+        "name": "Multiplayer",
+        "slug": "multiplayer",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/multiplayer"
+      },
+      {
+        "id": 3,
+        "created_at": 1298937600,
+        "name": "Co-operative",
+        "slug": "co-operative",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 11,
+        "created_at": 1297555200,
+        "name": "Real Time Strategy (RTS)",
+        "slug": "real-time-strategy-rts",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/real-time-strategy-rts"
+      },
+      {
+        "id": 12,
+        "created_at": 1297555200,
+        "name": "Role-playing (RPG)",
+        "slug": "role-playing-rpg",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/role-playing-rpg"
+      },
+      {
+        "id": 15,
+        "created_at": 1297555200,
+        "name": "Strategy",
+        "slug": "strategy",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/strategy"
+      }
+    ],
+    "name": "The Witcher Battle Arena",
+    "platforms": [
+      {
+        "id": 34,
+        "abbreviation": "Android",
+        "alternative_name": "Infocusa3",
+        "category": 4,
+        "created_at": 1302566400,
+        "name": "Android",
+        "platform_logo": 195,
+        "slug": "android",
+        "updated_at": 1556150400,
+        "url": "https://www.igdb.com/platforms/android",
+        "versions": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          236,
+          237,
+          238,
+          239
+        ],
+        "websites": [
+          7
+        ]
+      },
+      {
+        "id": 39,
+        "abbreviation": "iOS",
+        "category": 4,
+        "created_at": 1317686400,
+        "name": "iOS",
+        "platform_logo": 248,
+        "slug": "ios",
+        "updated_at": 1391644800,
+        "url": "https://www.igdb.com/platforms/ios",
+        "versions": [
+          43
+        ]
+      }
+    ],
+    "slug": "the-witcher-battle-arena",
+    "summary": "The Witcher Battle Arena is a spin off from the CD Project Red's Witcher series into the MOBA genre. There are 8 playable characters from the Witcher universe, fighting in short matches 3V3 (~10min). \n \nDesigned with mobile devices in mind, Battle Arena combines intuitive controls with skill-based strategies and fast-paced action.",
+    "url": "https://www.igdb.com/games/the-witcher-battle-arena",
+    "websites": [
+      {
+        "id": 18176,
+        "category": 1,
+        "game": 9689,
+        "trusted": false,
+        "url": "http://thewitcher.com/twba"
+      },
+      {
+        "id": 18177,
+        "category": 2,
+        "game": 9689,
+        "trusted": false,
+        "url": "http://witcher.wikia.com/wiki/The_Witcher_Battle_Arena"
+      },
+      {
+        "id": 18178,
+        "category": 3,
+        "game": 9689,
+        "trusted": true,
+        "url": "https://en.wikipedia.org/wiki/The_Witcher_Battle_Arena"
+      },
+      {
+        "id": 18179,
+        "category": 4,
+        "game": 9689,
+        "trusted": true,
+        "url": "https://www.facebook.com/thewitcher"
+      },
+      {
+        "id": 18180,
+        "category": 8,
+        "game": 9689,
+        "trusted": true,
+        "url": "https://www.instagram.com/cdpred"
+      },
+      {
+        "id": 18181,
+        "category": 9,
+        "game": 9689,
+        "trusted": true,
+        "url": "https://www.youtube.com/user/WitcherGame"
+      }
+    ]
+  },
+  {
+    "id": 8765,
+    "artworks": [
+      {
+        "id": 7524,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/ar5t0.jpg",
+        "width": 1920
+      }
+    ],
+    "collection": 62,
+    "cover": {
+      "id": 75193,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 8765,
+      "height": 1050,
+      "image_id": "co1m0p",
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1m0p.jpg",
+      "width": 788
+    },
+    "first_release_date": 1417046400,
+    "game_modes": [
+      {
+        "id": 1,
+        "created_at": 1298937600,
+        "name": "Single player",
+        "slug": "single-player",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/single-player"
+      },
+      {
+        "id": 2,
+        "created_at": 1298937600,
+        "name": "Multiplayer",
+        "slug": "multiplayer",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/multiplayer"
+      }
+    ],
+    "genres": [
+      {
+        "id": 15,
+        "created_at": 1297555200,
+        "name": "Strategy",
+        "slug": "strategy",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/strategy"
+      },
+      {
+        "id": 16,
+        "created_at": 1297641600,
+        "name": "Turn-based strategy (TBS)",
+        "slug": "turn-based-strategy-tbs",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/turn-based-strategy-tbs"
+      },
+      {
+        "id": 26,
+        "created_at": 1301961600,
+        "name": "Quiz/Trivia",
+        "slug": "quiz-trivia",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/quiz-trivia"
+      },
+      {
+        "id": 31,
+        "created_at": 1323561600,
+        "name": "Adventure",
+        "slug": "adventure",
+        "updated_at": 1323561600,
+        "url": "https://www.igdb.com/genres/adventure"
+      }
+    ],
+    "name": "The Witcher: Adventure Game",
+    "platforms": [
+      {
+        "id": 6,
+        "abbreviation": "PC",
+        "alternative_name": "mswin",
+        "category": 4,
+        "created_at": 1297555200,
+        "name": "PC (Microsoft Windows)",
+        "platform_logo": 203,
+        "slug": "win",
+        "updated_at": 1470009600,
+        "url": "https://www.igdb.com/platforms/win",
+        "versions": [
+          1,
+          13,
+          14,
+          15,
+          124
+        ],
+        "websites": [
+          2
+        ]
+      },
+      {
+        "id": 34,
+        "abbreviation": "Android",
+        "alternative_name": "Infocusa3",
+        "category": 4,
+        "created_at": 1302566400,
+        "name": "Android",
+        "platform_logo": 195,
+        "slug": "android",
+        "updated_at": 1556150400,
+        "url": "https://www.igdb.com/platforms/android",
+        "versions": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          236,
+          237,
+          238,
+          239
+        ],
+        "websites": [
+          7
+        ]
+      },
+      {
+        "id": 39,
+        "abbreviation": "iOS",
+        "category": 4,
+        "created_at": 1317686400,
+        "name": "iOS",
+        "platform_logo": 248,
+        "slug": "ios",
+        "updated_at": 1391644800,
+        "url": "https://www.igdb.com/platforms/ios",
+        "versions": [
+          43
+        ]
+      }
+    ],
+    "slug": "the-witcher-adventure-game",
+    "storyline": "Triss must have sensed it, too,” Geralt thought to himself. His witcher medallion twitched on his chest. Some kind of magic nearby, or some creature from another sphere. Either one spells trouble. So why hasn’t she said anything? “We’re here! And not a moment too soon – my saddle sores were about to incite an uprising.” Dandelion always complained in his performing voice, to make sure his woes registered in the cheap seats. \n \nThis time his whining seemed especially loud, as though he were shouting to something in the darkness. Perhaps the cave’s inhabitants were his intended audience. A profitable gold mine at one point, the caverns had been a gloomy, monster-infested place for decades. Villagers who wandered too close would vanish without a trace. \n \nLately, though, the gloom had receded, and no one had disappeared for months. The village elders knew someone who knew Geralt and had offered him a fat purse if he’d gather a party to look into it. The elders claimed that the calm had disrupted the village’s status quo. Yarpen stroked his beard and muttered something under his breath. He had suspected from the start the elders weren’t telling them something. But he had agreed to come anyway. Why? And Triss – why was a court sorceress willing to abandon her post for a romp in an old mine? What was so special about this cave? As soon as they plunged into the darkness, Geralt knew he would have to wait for an answer – the hungry look of the ghouls crawling out of the void promised to keep him busy for a while.",
+    "summary": "The Witcher Adventure Game takes players on a journey across the world of The Witcher as they assume the roles of four distinct characters known from the books and video games: Geralt of Rivia, monster slayer; Triss Merigold, cunning sorceress; Yarpen Zigrin, dwarven warrior; and Dandelion, roguish bard. Each character has unique skills and multiple ways of overcoming obstacles—the choice is yours: do you fight your way to victory, call on your charm, or try your hand at diplomacy? \n \nA variety of quests invite players to hunt monsters, earn gold, and interact with the characters they meet in a web of alliances and treachery—a wild ride that starts as soon as you sit down to play, thanks to clear, simple rules and intuitive mechanics. Players may assist one another from time to time, but make no mistake—there can be only one winner.",
+    "url": "https://www.igdb.com/games/the-witcher-adventure-game",
+    "websites": [
+      {
+        "id": 18153,
+        "category": 2,
+        "game": 8765,
+        "trusted": false,
+        "url": "http://witcher.wikia.com/wiki/The_Witcher_The_Adventure_Game"
+      },
+      {
+        "id": 18154,
+        "category": 3,
+        "game": 8765,
+        "trusted": true,
+        "url": "https://en.wikipedia.org/wiki/The_Witcher_Adventure_Game"
+      },
+      {
+        "id": 18155,
+        "category": 4,
+        "game": 8765,
+        "trusted": true,
+        "url": "https://www.facebook.com/thewitcher"
+      },
+      {
+        "id": 18156,
+        "category": 5,
+        "game": 8765,
+        "trusted": true,
+        "url": "https://twitter.com/witchergame"
+      },
+      {
+        "id": 18157,
+        "category": 8,
+        "game": 8765,
+        "trusted": true,
+        "url": "https://www.instagram.com/cdpred"
+      },
+      {
+        "id": 18158,
+        "category": 9,
+        "game": 8765,
+        "trusted": true,
+        "url": "https://www.youtube.com/user/WitcherGame"
+      },
+      {
+        "id": 18159,
+        "category": 10,
+        "game": 8765,
+        "trusted": true,
+        "url": "https://itunes.apple.com/us/app/the-witcher-ag/id735549884?mt=8"
+      },
+      {
+        "id": 18160,
+        "category": 12,
+        "game": 8765,
+        "trusted": true,
+        "url": "https://play.google.com/store/apps/details?id=com.cdpred.witcher.abg"
+      },
+      {
+        "id": 18161,
+        "category": 13,
+        "game": 8765,
+        "trusted": true,
+        "url": "https://store.steampowered.com/app/303800"
+      },
+      {
+        "id": 66448,
+        "category": 1,
+        "game": 8765,
+        "trusted": false,
+        "url": "http://thewitcher.com/adventuregame/"
+      },
+      {
+        "id": 119738,
+        "category": 17,
+        "game": 8765,
+        "trusted": true,
+        "url": "https://www.gog.com/game/witcher_adventure_game"
+      }
+    ]
+  },
+  {
+    "id": 19474,
+    "artworks": [
+      {
+        "id": 6018,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/ar4n6.jpg",
+        "width": 1920
+      },
+      {
+        "id": 6704,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/ar568.jpg",
+        "width": 3840
+      }
+    ],
+    "collection": 62,
+    "cover": {
+      "id": 85639,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 19474,
+      "height": 960,
+      "image_id": "co1u2v",
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u2v.jpg",
+      "width": 720
+    },
+    "first_release_date": 1540252800,
+    "game_modes": [
+      {
+        "id": 1,
+        "created_at": 1298937600,
+        "name": "Single player",
+        "slug": "single-player",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/single-player"
+      },
+      {
+        "id": 2,
+        "created_at": 1298937600,
+        "name": "Multiplayer",
+        "slug": "multiplayer",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/multiplayer"
+      }
+    ],
+    "genres": [
+      {
+        "id": 15,
+        "created_at": 1297555200,
+        "name": "Strategy",
+        "slug": "strategy",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/strategy"
+      }
+    ],
+    "name": "Gwent: The Witcher Card Game",
+    "platforms": [
+      {
+        "id": 6,
+        "abbreviation": "PC",
+        "alternative_name": "mswin",
+        "category": 4,
+        "created_at": 1297555200,
+        "name": "PC (Microsoft Windows)",
+        "platform_logo": 203,
+        "slug": "win",
+        "updated_at": 1470009600,
+        "url": "https://www.igdb.com/platforms/win",
+        "versions": [
+          1,
+          13,
+          14,
+          15,
+          124
+        ],
+        "websites": [
+          2
+        ]
+      },
+      {
+        "id": 34,
+        "abbreviation": "Android",
+        "alternative_name": "Infocusa3",
+        "category": 4,
+        "created_at": 1302566400,
+        "name": "Android",
+        "platform_logo": 195,
+        "slug": "android",
+        "updated_at": 1556150400,
+        "url": "https://www.igdb.com/platforms/android",
+        "versions": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          236,
+          237,
+          238,
+          239
+        ],
+        "websites": [
+          7
+        ]
+      },
+      {
+        "id": 39,
+        "abbreviation": "iOS",
+        "category": 4,
+        "created_at": 1317686400,
+        "name": "iOS",
+        "platform_logo": 248,
+        "slug": "ios",
+        "updated_at": 1391644800,
+        "url": "https://www.igdb.com/platforms/ios",
+        "versions": [
+          43
+        ]
+      },
+      {
+        "id": 48,
+        "abbreviation": "PS4",
+        "alternative_name": "PS4",
+        "category": 1,
+        "created_at": 1326499200,
+        "generation": 8,
+        "name": "PlayStation 4",
+        "platform_logo": 231,
+        "product_family": 1,
+        "slug": "ps4--1",
+        "summary": "The PlayStation 4 system opens the door to an incredible journey through immersive new gaming worlds and a deeply connected gaming community. PS4 puts gamers first with an astounding launch line-up and over 180 games in development. Play amazing top-tier blockbusters and innovative indie hits on PS4. Developer inspired, gamer focused.",
+        "updated_at": 1433116800,
+        "url": "https://www.igdb.com/platforms/ps4--1",
+        "versions": [
+          17,
+          178,
+          179
+        ],
+        "websites": [
+          11
+        ]
+      },
+      {
+        "id": 49,
+        "abbreviation": "XONE",
+        "alternative_name": "Xbone",
+        "category": 1,
+        "created_at": 1326499200,
+        "generation": 8,
+        "name": "Xbox One",
+        "product_family": 2,
+        "slug": "xboxone",
+        "summary": "Welcome to a new generation of games and entertainment. Where games push the boundaries of realism. And television obeys your every command. Where listening to music while playing a game is a snap. And you can jump from TV to movies to music to a game in an instant. Where your experience is custom tailored to you. And the entertainment you love is all in one place. Welcome to the all-in-one, Xbox One",
+        "updated_at": 1429920000,
+        "url": "https://www.igdb.com/platforms/xboxone",
+        "versions": [
+          78,
+          180,
+          185,
+          188
+        ],
+        "websites": [
+          12
+        ]
+      }
+    ],
+    "slug": "gwent-the-witcher-card-game",
+    "storyline": "GWENT is a competitive card game developed by CD PROJEKT RED — creators of The Witcher 3: Wild Hunt. In GWENT, gamers clash with friends in fast-paced duels that combine skill-based play with bluffing, and careful deck construction. The game is played over a best-of-three series of rounds, as players unleash their hand by slinging spells and diverse units with special abilities, and use clever tricks to deceive their opponents.",
+    "summary": "Join in The Witcher universe’s favorite card game! In GWENT, you clash with your friends in fast-paced duels that combine bluffing, on-the-fly decision making and careful deck construction. \n \nPlay your cards right and manage a two-row battle formation as you unleash your hand over a best-of-three series of rounds. With heroes, spells and special abilities that dramatically turn the tide of battle, deception and clever tricks will be necessary parts of your arsenal. \n \nPick your side – command five different factions: the mighty Nilfgaardian Empire, proud Skellige, brutal Monsters, cunning Northern Realms, or shadowy Scoia’tael. \n \nBuild your deck – collect new cards and create armies full of versatile units and unique heroes. \n \nCraft new cards – break down unwanted cards and craft new ones to build an ever-evolving deck. \n \nForce their hand – with limited cards per game, lure your opponent into draining their resources! \n \nLose the battle, win the war – win the entire game by learning how to cleverly lose a round. \n \nHold the line – play your cards across two rows and build a formation to counter your opponent’s strategy. \n \nShape the meta-game — the party just started and everyone can become a pro. Test yourself and become the next leaderboard legend. \n \nFriendly Matches – test your deck, try out new strategies, or just show off your collection of rare, animated cards. \n \nRanked Matches – rise through player-driven divisions. \n \nArena Mode – draft a deck from GWENT’s entire collection of cards and conquer Master Mirror’s arena!",
+    "url": "https://www.igdb.com/games/gwent-the-witcher-card-game",
+    "websites": [
+      {
+        "id": 20062,
+        "category": 1,
+        "game": 19474,
+        "trusted": false,
+        "url": "https://www.playgwent.com/en"
+      },
+      {
+        "id": 20063,
+        "category": 2,
+        "game": 19474,
+        "trusted": false,
+        "url": "http://gwent.wikia.com/wiki/Gwent_Wikia"
+      },
+      {
+        "id": 20064,
+        "category": 3,
+        "game": 19474,
+        "trusted": true,
+        "url": "https://en.wikipedia.org/wiki/Gwent:_The_Witcher_Card_Game"
+      },
+      {
+        "id": 20065,
+        "category": 4,
+        "game": 19474,
+        "trusted": true,
+        "url": "https://www.facebook.com/PlayGwent"
+      },
+      {
+        "id": 20066,
+        "category": 5,
+        "game": 19474,
+        "trusted": true,
+        "url": "https://twitter.com/PlayGwent"
+      },
+      {
+        "id": 20067,
+        "category": 9,
+        "game": 19474,
+        "trusted": true,
+        "url": "https://www.youtube.com/playgwent"
+      },
+      {
+        "id": 57606,
+        "category": 6,
+        "game": 19474,
+        "trusted": true,
+        "url": "https://www.twitch.tv/cdprojektred"
+      },
+      {
+        "id": 57607,
+        "category": 8,
+        "game": 19474,
+        "trusted": true,
+        "url": "https://www.instagram.com/cdpred"
+      },
+      {
+        "id": 78082,
+        "category": 14,
+        "game": 19474,
+        "trusted": true,
+        "url": "https://www.reddit.com/r/gwent"
+      },
+      {
+        "id": 116689,
+        "category": 10,
+        "game": 19474,
+        "trusted": true,
+        "url": "https://apps.apple.com/app/id1466943149"
+      },
+      {
+        "id": 118498,
+        "category": 17,
+        "game": 19474,
+        "trusted": true,
+        "url": "https://www.gog.com/game/gwent_the_witcher_card_game"
+      }
+    ]
+  },
+  {
+    "id": 20275,
+    "collection": 62,
+    "cover": {
+      "id": 89344,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 20275,
+      "height": 1115,
+      "image_id": "co1wxs",
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wxs.jpg",
+      "width": 836
+    },
+    "first_release_date": 1221523200,
+    "game_modes": [
+      {
+        "id": 1,
+        "created_at": 1298937600,
+        "name": "Single player",
+        "slug": "single-player",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/single-player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "created_at": 1297555200,
+        "name": "Role-playing (RPG)",
+        "slug": "role-playing-rpg",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/role-playing-rpg"
+      }
+    ],
+    "name": "The Witcher: Enhanced Edition",
+    "platforms": [
+      {
+        "id": 6,
+        "abbreviation": "PC",
+        "alternative_name": "mswin",
+        "category": 4,
+        "created_at": 1297555200,
+        "name": "PC (Microsoft Windows)",
+        "platform_logo": 203,
+        "slug": "win",
+        "updated_at": 1470009600,
+        "url": "https://www.igdb.com/platforms/win",
+        "versions": [
+          1,
+          13,
+          14,
+          15,
+          124
+        ],
+        "websites": [
+          2
+        ]
+      },
+      {
+        "id": 14,
+        "abbreviation": "Mac",
+        "alternative_name": "Mac OS",
+        "category": 4,
+        "created_at": 1297641600,
+        "name": "Mac",
+        "platform_logo": 100,
+        "slug": "mac",
+        "updated_at": 1394236800,
+        "url": "https://www.igdb.com/platforms/mac",
+        "versions": [
+          45,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151
+        ],
+        "websites": [
+          5
+        ]
+      }
+    ],
+    "slug": "the-witcher-enhanced-edition",
+    "summary": "Now you can experience this fantastic RPG on Mac and PC!",
+    "time_to_beat": {
+      "id": 20275,
+      "completely": 191550,
+      "hastly": 0,
+      "normally": 0
+    },
+    "url": "https://www.igdb.com/games/the-witcher-enhanced-edition",
+    "websites": [
+      {
+        "id": 18141,
+        "category": 3,
+        "game": 20275,
+        "trusted": true,
+        "url": "https://en.wikipedia.org/wiki/The_Witcher_(video_game)"
+      },
+      {
+        "id": 18142,
+        "category": 4,
+        "game": 20275,
+        "trusted": true,
+        "url": "https://www.facebook.com/thewitcher"
+      },
+      {
+        "id": 18143,
+        "category": 5,
+        "game": 20275,
+        "trusted": true,
+        "url": "https://twitter.com/witchergame"
+      },
+      {
+        "id": 40504,
+        "category": 13,
+        "game": 20275,
+        "trusted": true,
+        "url": "https://store.steampowered.com/app/20900"
+      },
+      {
+        "id": 40505,
+        "category": 1,
+        "game": 20275,
+        "trusted": false,
+        "url": "http://www.thewitcher.com"
+      },
+      {
+        "id": 103801,
+        "category": 2,
+        "game": 20275,
+        "trusted": false,
+        "url": "https://witcher.fandom.com/wiki/The_Witcher_(game)"
+      },
+      {
+        "id": 119910,
+        "category": 17,
+        "game": 20275,
+        "trusted": true,
+        "url": "https://www.gog.com/game/the_witcher"
+      }
+    ]
+  },
+  {
+    "id": 128541,
+    "name": "The Witcher: Enhanced Edition",
+    "slug": "the-witcher-enhanced-edition--1",
+    "url": "https://www.igdb.com/games/the-witcher-enhanced-edition--1"
+  },
+  {
+    "id": 80342,
+    "collection": 62,
+    "cover": {
+      "id": 94278,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 80342,
+      "height": 753,
+      "image_id": "co20qu",
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20qu.jpg",
+      "width": 565
+    },
+    "genres": [
+      {
+        "id": 12,
+        "created_at": 1297555200,
+        "name": "Role-playing (RPG)",
+        "slug": "role-playing-rpg",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/role-playing-rpg"
+      }
+    ],
+    "name": "The Witcher: Rise of the White Wolf",
+    "slug": "the-witcher-rise-of-the-white-wolf",
+    "summary": "The Witcher: Rise of the White Wolf was an enhanced and expanded port of the 2007 PC only game The Witcher. Developed by Widescreen Games, the game was to have a new engine and a wealth of other differences. It has since been cancelled.",
+    "url": "https://www.igdb.com/games/the-witcher-rise-of-the-white-wolf"
+  },
+  {
+    "id": 478,
+    "artworks": [
+      {
+        "id": 1635,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/e05wsykexgfyqczxefzd.jpg",
+        "width": 730
+      },
+      {
+        "id": 1636,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/eamhufthkrhbvyjlh0ri.jpg",
+        "width": 1000
+      },
+      {
+        "id": 1637,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/m53m1kojxxieo44e4mkv.jpg",
+        "width": 1000
+      },
+      {
+        "id": 1639,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/dljjeimice6cbm5uh1mk.jpg",
+        "width": 1000
+      },
+      {
+        "id": 1640,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/bgt9iaipr2nzwn9m8yob.jpg",
+        "width": 1000
+      },
+      {
+        "id": 1641,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/zq8t2ul2zgvjhk7fz74h.jpg",
+        "width": 1000
+      },
+      {
+        "id": 1642,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/luxsyip1fhvxf9owhfbc.jpg",
+        "width": 1000
+      },
+      {
+        "id": 1643,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/jg7rjwol2y5vcavtcyg3.jpg",
+        "width": 960
+      },
+      {
+        "id": 1644,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/yltderfdqkouxiqwyrke.jpg",
+        "width": 1000
+      },
+      {
+        "id": 1645,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/p5budcsryednlepb7zd6.jpg",
+        "width": 1000
+      },
+      {
+        "id": 1646,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/nibxg61vnsawlrkjpxyk.jpg",
+        "width": 1000
+      },
+      {
+        "id": 1647,
+        "url": "https://images.igdb.com/igdb/image/upload/t_720p/tbhaezpedj4scvamrwrl.jpg",
+        "width": 760
+      }
+    ],
+    "collection": 62,
+    "cover": {
+      "id": 89356,
+      "alpha_channel": false,
+      "animated": false,
+      "game": 478,
+      "height": 1023,
+      "image_id": "co1wy4",
+      "url": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wy4.jpg",
+      "width": 768
+    },
+    "first_release_date": 1305590400,
+    "game_modes": [
+      {
+        "id": 1,
+        "created_at": 1298937600,
+        "name": "Single player",
+        "slug": "single-player",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/game_modes/single-player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "created_at": 1297555200,
+        "name": "Role-playing (RPG)",
+        "slug": "role-playing-rpg",
+        "updated_at": 1323216000,
+        "url": "https://www.igdb.com/genres/role-playing-rpg"
+      },
+      {
+        "id": 31,
+        "created_at": 1323561600,
+        "name": "Adventure",
+        "slug": "adventure",
+        "updated_at": 1323561600,
+        "url": "https://www.igdb.com/genres/adventure"
+      }
+    ],
+    "name": "The Witcher 2: Assassins of Kings",
+    "platforms": [
+      {
+        "id": 3,
+        "abbreviation": "Linux",
+        "alternative_name": "GNU/Linux",
+        "category": 4,
+        "created_at": 1297555200,
+        "name": "Linux",
+        "platform_logo": 33,
+        "product_family": 4,
+        "slug": "linux",
+        "summary": "Linux is a free and open-source (FOSS/FLOSS) Operating System. In a more precise and complex definition, Linux is an open-source OS kernel on which a large variety of Operating Systems (known as Linux distributions) are built.",
+        "updated_at": 1392940800,
+        "url": "https://www.igdb.com/platforms/linux",
+        "versions": [
+          44
+        ],
+        "websites": [
+          1
+        ]
+      },
+      {
+        "id": 6,
+        "abbreviation": "PC",
+        "alternative_name": "mswin",
+        "category": 4,
+        "created_at": 1297555200,
+        "name": "PC (Microsoft Windows)",
+        "platform_logo": 203,
+        "slug": "win",
+        "updated_at": 1470009600,
+        "url": "https://www.igdb.com/platforms/win",
+        "versions": [
+          1,
+          13,
+          14,
+          15,
+          124
+        ],
+        "websites": [
+          2
+        ]
+      },
+      {
+        "id": 12,
+        "abbreviation": "X360",
+        "alternative_name": "xbx360",
+        "category": 1,
+        "created_at": 1297555200,
+        "generation": 7,
+        "name": "Xbox 360",
+        "platform_logo": 250,
+        "product_family": 2,
+        "slug": "xbox360",
+        "summary": "Xbox 360 brings you a total games and entertainment experience. The largest library of games, including titles that get you right into the thick of it with Kinect. Plus, your whole family can watch HD movies, TV shows, live events, music, sports and more—across all your devices. Xbox 360 is the center of your games and entertainment universe.",
+        "updated_at": 1392854400,
+        "url": "https://www.igdb.com/platforms/xbox360",
+        "versions": [
+          2,
+          3,
+          83
+        ],
+        "websites": [
+          4
+        ]
+      },
+      {
+        "id": 14,
+        "abbreviation": "Mac",
+        "alternative_name": "Mac OS",
+        "category": 4,
+        "created_at": 1297641600,
+        "name": "Mac",
+        "platform_logo": 100,
+        "slug": "mac",
+        "updated_at": 1394236800,
+        "url": "https://www.igdb.com/platforms/mac",
+        "versions": [
+          45,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151
+        ],
+        "websites": [
+          5
+        ]
+      }
+    ],
+    "slug": "the-witcher-2-assassins-of-kings",
+    "storyline": "The player is Geralt of Rivia, a professional monster slayer, a witcher. Entangled in the political turmoil that engulfed Temeria, Geralt helped quell the rebellion of the Order of the Flaming Rose. Soon after, he saved King Foltest’s life when the monarch was attacked by a witcher-like assassin. He continues to protect the king, serving as his bodyguard as Foltest strives to bring peace to his kingdom. The Order’s last bastions have yielded to the royal army, yet one more task remains - the Baroness La Valette announced her secession from the realm, and her fortress must be taken. A month after the attempted assassination, Foltest’s armies stand at the gates of La Valette Castle, preparing for a final assault. Still at Foltest’s side, Geralt is among them, unable to begin his personal quest to discover the mysterious assassin’s origin and identity.",
+    "summary": "This third-person dark fantasy Western RPG and sequel to The Witcher (2007), featuring multiple endings and branching narrative paths, follows the travels of Geralt of Rivia, witcher, who, after being falsely accused of regicide, sets out to clear his name and find the real killer, in a time of political turmoil and the brink of war between the imperialistic Nilfgaardian Empire and the Four Kingdoms.",
+    "time_to_beat": 478,
+    "url": "https://www.igdb.com/games/the-witcher-2-assassins-of-kings",
+    "websites": [
+      {
+        "id": 18146,
+        "category": 1,
+        "game": 478,
+        "trusted": false,
+        "url": "http://thewitcher.com/witcher2/"
+      },
+      {
+        "id": 18147,
+        "category": 2,
+        "game": 478,
+        "trusted": false,
+        "url": "http://witcher.wikia.com/wiki/The_Witcher_2:_Assassins_of_Kings"
+      },
+      {
+        "id": 18148,
+        "category": 3,
+        "game": 478,
+        "trusted": true,
+        "url": "https://en.wikipedia.org/wiki/The_Witcher_2:_Assassins_of_Kings"
+      },
+      {
+        "id": 18149,
+        "category": 4,
+        "game": 478,
+        "trusted": true,
+        "url": "https://www.facebook.com/thewitcher"
+      },
+      {
+        "id": 18150,
+        "category": 5,
+        "game": 478,
+        "trusted": true,
+        "url": "https://twitter.com/witchergame"
+      },
+      {
+        "id": 18151,
+        "category": 13,
+        "game": 478,
+        "trusted": true,
+        "url": "https://store.steampowered.com/app/20920"
+      }
+    ]
+  }
+]

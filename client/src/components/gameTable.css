@@ -1,0 +1,9 @@
+.td {
+  max-height: 150px;
+}
+
+.sm {
+  font-weight: 200;
+  font-size: small;
+  list-style-type: none;
+}

@@ -1,0 +1,18 @@
+.smListItem {
+  list-style-type: none;
+  padding-left: .5em;
+  font-size: small;
+}
+
+li > h6 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.closeBtn {
+  position: absolute;
+  width: 35px;
+  align-self: flex-end;
+  right: 5px;
+  top: 5px;
+}

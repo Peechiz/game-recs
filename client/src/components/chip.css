@@ -1,0 +1,16 @@
+.chip {
+  border-radius: 2rem !important;
+  margin-right: .5em;
+  font-size: .9rem !important;
+  /* padding-right: 1.3em !important; */
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0 !important;
+  padding-bottom: .1rem !important;
+  margin-bottom: .5em;
+}
+
+.chip > span:nth-child(2) {
+  margin-left: 1em;
+  font-size: 1rem !important;
+}
