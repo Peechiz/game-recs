@@ -1,0 +1,45 @@
+.thumb {
+  object-fit: cover;
+  height: auto;
+  width: 225px; 
+  overflow: hidden;
+}
+
+.mini {
+  position: relative;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+  overflow: scroll;
+  margin: .5em 1em .5em 0;
+  cursor: pointer;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;  
+  right: 0;
+  padding: 1em;
+  opacity: 0;
+  transition: opacity .27s ease-out;
+  color: rgb(223, 223, 223);
+}
+
+.info:hover {
+  opacity: 1;
+  backdrop-filter: blur(7px) brightness(25%);;
+}
+
+.info li {
+  list-style-type: none;
+}
+
+.info ul {
+  padding-left: 0;
+}
+
+.smTxt { 
+  font-size: small;
+}

@@ -1,0 +1,31 @@
+.rad {
+  font-family: "Chango";
+  font-style: italic;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(27, 82, 201),
+    rgb(15, 208, 242),
+    rgb(0, 254, 21)
+  );
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-right: .1em;
+  position: relative;
+}
+
+.rad:after {
+  background: none;
+  content: attr(data-text);
+  left: 0;
+  position: absolute;
+  text-shadow: 2.5px 3px 2px rgba(0,0,0,.8);
+  top: 0;
+  z-index: -1;
+}
+
+.nav > span {
+  cursor: pointer;
+}

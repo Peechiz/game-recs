@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import * as Moment from "moment";
-import "./gameTable.css";
+import "../assets/styles/gameTable.css";
 import GameEntry from "../models/GameEntry.model";
 
 const GameTable = ({ entries, action }) => {

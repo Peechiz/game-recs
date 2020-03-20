@@ -1,14 +1,15 @@
 import React from "react";
-import "./chip.css";
+import "../assets/styles/chip.css";
 
-const Chip = ({ children, action, isRemove }) => {
+const Chip = ({ children, action, isRemove, noSpan, myStyle }) => {
+  if (myStyle) {console.log(myStyle)}
   return (
-    <button onClick={() => action()} className="btn btn-primary chip">
+    <button style={myStyle} onClick={() => action()} className="btn btn-primary chip">
       <span>{children}</span>
-      {
-        isRemove ? 
+      { !noSpan &&
+        (isRemove ? 
         <span>&times;</span> :
-        <span>+</span>
+        <span>+</span>)
       }
     </button>
   );

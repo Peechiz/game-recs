@@ -1,24 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Search from './pages/Search';
-import Browse from './pages/Browse';
 import Home from './pages/Home';
-import './App.css'
+import Admin from './pages/Admin';
+import DetailPage from './pages/DetailPage';
+import './assets/styles/App.css'
 
 
 const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/browse">
-          <Browse />
-        </Route>
-        <Route path="/search">
-          <Search />
-        </Route>
+        <Route exact path="/" component={Home}/>          
+        <Route path="/admin" component={Admin}/>
+        <Route path="/game/:id" component={DetailPage}/>
       </Switch>
     </Router>
   )

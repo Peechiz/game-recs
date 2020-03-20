@@ -15,4 +15,21 @@ li > h6 {
   align-self: flex-end;
   right: 5px;
   top: 5px;
+} 
+
+.deets {
+  position: relative;
+  top: -200px;
+}
+
+.ctn {
+  width: 100;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.id-field {
+  position: absolute;
+  bottom: -26px;
+  right: 0;
 }
