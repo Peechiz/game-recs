@@ -2,7 +2,6 @@ import React from "react";
 import "../assets/styles/chip.css";
 
 const Chip = ({ children, action, isRemove, noSpan, myStyle }) => {
-  if (myStyle) {console.log(myStyle)}
   return (
     <button style={myStyle} onClick={() => action()} className="btn btn-primary chip">
       <span>{children}</span>

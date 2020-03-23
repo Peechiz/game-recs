@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const axios = require('axios').default;
-const { gameQueryBase, fixImg } =  require('./queryUtils');
+const { gameQueryBase, fixImg } = require('./queryUtils');
 
-router.route('/:game')
+router.route('/:id')
   .get(
     async (req, res) => {
       await axios({
@@ -12,7 +12,7 @@ router.route('/:game')
           'Accept': 'application/json',
           'user-key': process.env.IGDB_USER_KEY
         },
-        data: gameQueryBase + `search "${req.params.game}";where category = 0 & cover != null;`
+        data: gameQueryBase + `where id = ${req.params.id};`
       })
         .then(response => {
           return res.json(response.data.map(game => {

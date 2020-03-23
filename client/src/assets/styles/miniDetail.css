@@ -27,6 +27,11 @@
   color: rgb(223, 223, 223);
 }
 
+.infoBox {
+  position: relative;
+  height: 100%;
+}
+
 .info:hover {
   opacity: 1;
   backdrop-filter: blur(7px) brightness(25%);;
@@ -42,4 +47,17 @@
 
 .smTxt { 
   font-size: small;
+}
+
+.info svg {
+  margin: 0 5px 0 0;
+}
+
+.platforms {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
 }
