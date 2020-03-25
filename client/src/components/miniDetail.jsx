@@ -9,13 +9,20 @@ const MiniDetail = ({ entry }) => {
   const [mouseOver, setMouseOver] = useState(false);
 
   const uniquePlatforms = (arr, p) => {
-    const { name } = p
+    const { name } = p;
 
-    if (!/xbox/i.test(name) || arr.map(p => p.name).every(n => !(/xbox/i.test(n)))){
-      arr.push(p)
+    const notRepeatXbox = (arr, name) =>
+      !/xbox/i.test(name) ||
+      arr.map(p => p.name).every(n => !/xbox/i.test(n));
+    const notRepeatPS = (arr, name) =>
+      !/ps|playstation/i.test(name) ||
+      arr.map(p => p.name).every(n => !/ps|playstation/i.test(n));
+
+    if (notRepeatXbox(arr, name) && notRepeatPS(arr, name)) {
+      arr.push(p);
     }
-    return arr
-  }
+    return arr;
+  };
 
   return (
     <div
@@ -45,24 +52,21 @@ const MiniDetail = ({ entry }) => {
             </Chip>
           ))}
           <div className="platforms">
-            {game.platforms && (
-              <li className="font-weight-light smTxt">
-                {game.platforms.reduce(uniquePlatforms,[]).map(p=> {
-                  return (
-                    <Platform
-                      platform={p}
-                      style={{
-                        marginLeft: 7,
-                        marginRight: 7,
-                        height: 25,
-                        width: 25,
-                        fill: "rgb(223, 223, 223)"
-                      }}
-                    />
-                  );
-                })}
-              </li>
-            )}
+            {game.platforms &&
+              game.platforms.reduce(uniquePlatforms, []).map(p => {
+                return (
+                  <Platform
+                    platform={p}
+                    style={{
+                      marginLeft: 7,
+                      marginRight: 7,
+                      height: 25,
+                      width: 25,
+                      fill: "rgb(223, 223, 223)"
+                    }}
+                  />
+                );
+              })}
           </div>
         </div>
       </div>

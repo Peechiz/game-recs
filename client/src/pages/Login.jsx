@@ -8,9 +8,11 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <>
-      
-    </>
+    <div className="container">
+      <label htmlFor="p4ssw0rd">Enter password:</label>
+      <input type="password" id="p4ssw0rd" className="form-control"/>
+      <button className="btn btn-primary">Submit</button>
+    </div>
   )
 }
 

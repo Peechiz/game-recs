@@ -6,3 +6,36 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.appBar {
+  width: 100%;
+  height: 30px;
+  background-color: blueviolet;
+  position: fixed;
+  z-index: 999;
+  padding: 0 2em;
+}
+
+.appBar ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.appBar li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 2em;
+}
+
+.appBar a {
+  color: #fff;
+}
+
+.appBar a:hover {
+  color: #fff;
+}

@@ -22,10 +22,6 @@ const Platforms = {
 };
 
 const Platform = ({ platform, style }) => {
-  // const [PlatformIcon] = Object.keys(Platforms)
-  //   .map(key => Platforms[key])
-  //   .filter(p => p.test.test(platform.name))
-  //   .map(p => p.value);
 
   const testFor = (str, p) => Platforms[str].test(p.name);
 
