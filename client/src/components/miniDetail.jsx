@@ -8,8 +8,8 @@ const MiniDetail = ({ entry }) => {
 
   const [mouseOver, setMouseOver] = useState(false);
 
-  const uniquePlatforms = (arr, p) => {
-    const { name } = p;
+  const uniquePlatforms = (arr, platform) => {
+    const { name } = platform;
 
     const notRepeatXbox = (arr, name) =>
       !/xbox/i.test(name) ||
@@ -19,7 +19,7 @@ const MiniDetail = ({ entry }) => {
       arr.map(p => p.name).every(n => !/ps|playstation/i.test(n));
 
     if (notRepeatXbox(arr, name) && notRepeatPS(arr, name)) {
-      arr.push(p);
+      arr.push(platform);
     }
     return arr;
   };
