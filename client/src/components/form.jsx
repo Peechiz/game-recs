@@ -12,17 +12,17 @@ const Form = ({ entry, onSubmit }) => {
   const [whyPlay, setWhyPlay] = useState(entry.why);
   const [deleteEnabled, setDeleteEnabled] = useState(false);
 
-  const fetchHelpTags = async () => {
-    const res = await fetch("/api/tags");
-    const json = await res.json();
-    setHelpTags(json.map(tag => ({ name: tag, active: tags.includes(tag) })));
-  };
-
+  
   useEffect(() => {
+    const fetchHelpTags = async () => {
+      const res = await fetch("/api/tags");
+      const json = await res.json();
+      setHelpTags(json.map(tag => ({ name: tag, active: tags.includes(tag) })));
+    };
     fetchHelpTags();
   }, []);
 
-  const removeTag = tag => setTags([...tags.filter(t => t != tag)]);
+  const removeTag = tag => setTags([...tags.filter(t => t !== tag)]);
 
   const addTags = () => {
     const newTags = tagInputText.split(",").map(tag => tag.trim());

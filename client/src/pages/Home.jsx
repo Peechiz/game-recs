@@ -14,28 +14,25 @@ const Home = () => {
 
   
   useEffect(() => {
-    (async () => {
-      await fetchTags();
-      await fetchAllGames();
-    })()
-  }, []);
-
-  const fetchTags = async () => {
-    const res = await fetch("/api/tags");
-    const json = await res.json();
-    const params = new URLSearchParams(location.search).get('tags')
-    let searchTags = [];
-    if (params) {
-      searchTags = params.split(',');
+    const fetchTags = async () => {
+      const res = await fetch("/api/tags");
+      const json = await res.json();
+      const params = new URLSearchParams(location.search).get('tags')
+      let searchTags = [];
+      if (params) {
+        searchTags = params.split(',');
+      }
+      setTags(json.map(tag => ({ name: tag, active: searchTags.includes(tag) })));
     }
-    setTags(json.map(tag => ({ name: tag, active: searchTags.includes(tag) })));
-  }
-
-  const fetchAllGames = async () => {
-    const res = await fetch("/api/games");
-    const json = await res.json();
-    setGames(json);
-  }
+  
+    const fetchAllGames = async () => {
+      const res = await fetch("/api/games");
+      const json = await res.json();
+      setGames(json);
+    }
+    fetchTags();
+    fetchAllGames();
+  }, [location.search]);
 
   const tagSort = (a,b) => a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1;
 

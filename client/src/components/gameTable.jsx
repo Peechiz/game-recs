@@ -20,7 +20,7 @@ const GameTable = ({ entries, action }) => {
           const { game } = entry;
           return (
             <tr key={`${game.name}${i}`}>
-              <td>{game.cover && <img className="td" src={game.cover.url} />}</td>
+              <td>{game.cover && <img className="td" src={game.cover.url} alt=""/>}</td>
               <td><h5>{game.name}</h5></td>
               <td>{Moment.unix(game.first_release_date).format("Y")}</td>
               <td className="sm">

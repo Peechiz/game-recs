@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import GameDetail from "../components/gameDetail";
 import { chooseRandom } from "../util/util";
 import "../assets/styles/AddEdit.css";
 import Form from "../components/form";
-import Chip from "../components/chip";
 
 const AddEdit = ({ entry, submitForm, back }) => {
   const { game } = entry;
