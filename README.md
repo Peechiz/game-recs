@@ -54,6 +54,7 @@ Use the `search` bar to find games that you've played, and then click the `+` to
 - [ ] Add price information to Display page
 - [x] Add tag metadata (icon, definition lookup)
 - [ ] Bulk delete/Bulk update Tags
+
 ... and a few other details in TODO.txt
 
 ## Notes
