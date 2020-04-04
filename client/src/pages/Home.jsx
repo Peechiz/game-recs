@@ -5,14 +5,14 @@ import SearchBar from '../components/searchBar'
 import MiniDetail from "../components/miniDetail";
 import { ReactComponent as ShareIcon } from 'bootstrap-icons/icons/upload.svg'
 import '../assets/styles/home.css';
+import copy from 'copy-to-clipboard';
 
-const Home = () => {
+const Home = ({ history }) => {
   const location = useLocation();
   const [tags, setTags] = useState();
   const [search, setSearch] = useState('')
   const [games, setGames] = useState([]);
 
-  
   useEffect(() => {
     const fetchTags = async () => {
       const res = await fetch("/api/tags");
@@ -61,6 +61,14 @@ const Home = () => {
     }))
   }
 
+  const copyTagPath = () => {
+    const query = new URLSearchParams()
+    const activeTags = tags.filter(tag => tag.active).map(tag => tag.name)
+    query.set('tags', activeTags)
+    const path = `${window.location.host}?${query.toString()}`
+    copy(path);
+  }
+
   const someActiveTags = () => tags && !tags.every(t => !t.active)
 
   return (
@@ -69,7 +77,7 @@ const Home = () => {
         <div className="row">
           <div className="col-md-9">
             <h1>Dude, you totally have to play...</h1>
-            <SearchBar search={search} setSearch={setSearch} onSearch={() => {}}/>
+            <SearchBar search={search} setSearch={setSearch} onSearch={null}/>
 
             { // active tags
               tags &&
@@ -87,15 +95,18 @@ const Home = () => {
               </p>
             }
             {  someActiveTags() &&
-              <span>Share this tagset: <ShareIcon className="share" style={{fill: '#007bff'}} /></span>
+              <span>Share this tagset: <ShareIcon onClick={() => copyTagPath()} className="share" style={{fill: '#007bff'}} /></span>
             }
             <div className="flex d-flex flex-wrap grid">
             {
               // only games that include all active tags
               !!games.length && games.filter(
                 entry => tags.filter(t => t.active).every(t => entry.tags.includes(t.name))
-              ).map(e => (
-                <MiniDetail key={e.game.id} entry={e}/>
+              ).filter(entry => entry.game.name.toLowerCase().includes(search.toLowerCase()) ).map(e => (
+                <MiniDetail key={e.game.id} entry={e} click={() => {
+                  console.log('boop');
+                  history.push(`/games/${e._id}`)
+                }}/>
               ))
             }
             </div>
