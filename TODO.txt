@@ -1,17 +1,13 @@
 - admin login
-- make user display page
 
 - random shuffle main page games
 - add query option for filtering by precision at the root page
   - maybe place above the tags in the sidebar, make tags collapsable?
 
-- make dedicated tag editor page
-
-- get ICONS for system platforms
 - get icons for game modes? (single player, multiplayer, )
 
 - add link to Twitch stream / game trailer to DetailPage?
 
 --- scrape $$$ from each store's page?
 
-- button to update underlying game data
+- button to update underlying game data from IGDB
