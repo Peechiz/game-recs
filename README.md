@@ -50,7 +50,7 @@ Use the `search` bar to find games that you've played, and then click the `+` to
 ## TODO
 - [ ] Admin Login / Secure API
 - [x] Add/Edit Games
-- [ ] Mobile styling for Display page
+- [ ] Mobile styling for Landing / Display page
 - [ ] Add price information to Display page
 - [x] Add tag metadata (icon, definition lookup)
 - [ ] Bulk delete/Bulk update Tags
