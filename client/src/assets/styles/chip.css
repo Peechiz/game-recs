@@ -5,12 +5,18 @@
   /* padding-right: 1.3em !important; */
   display: flex;
   justify-content: space-between;
-  padding-top: 0 !important;
-  padding-bottom: .1rem !important;
+  padding: .2rem 1rem;
   margin-bottom: .5em;
+  color: #fff;
+  text-align: center;
 }
 
-.chip > span:nth-child(2) {
-  margin-left: 1em;
+.chip div {
+  width: 100%;
+  display: inline-block;
+}
+
+.chip > span {
+  margin-left: .5em;
   font-size: 1rem !important;
 }
