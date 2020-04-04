@@ -145,22 +145,24 @@ const Form = ({ entry, onSubmit }) => {
             <button onClick={() => submitForm()} className="btn btn-primary">
               Submit
             </button>
-            {entry._id && (
-              <button
-                disabled={!deleteEnabled}
-                onClick={() => deleteGame()}
-                className="btn btn-danger mx-2"
-              >
-                Delete
-              </button>
-            )}
-            <div className="form-check form-check-inline">
-              <input className="form-check-input"
-                type="checkbox" id="enableDelete" value={deleteEnabled}
-                onChange={() => setDeleteEnabled(!deleteEnabled)}
-              />
-              <label className="form-check-label" htmlFor="enableDelete">enable delete?</label>
-            </div>
+            {entry._id &&
+              <>
+                <button
+                  disabled={!deleteEnabled}
+                  onClick={() => deleteGame()}
+                  className="btn btn-danger mx-2"
+                >
+                  Delete
+                </button>
+                <div className="form-check form-check-inline">
+                  <input className="form-check-input"
+                    type="checkbox" id="enableDelete" value={deleteEnabled}
+                    onChange={() => setDeleteEnabled(!deleteEnabled)}
+                  />
+                  <label className="form-check-label" htmlFor="enableDelete">enable delete?</label>
+                </div>
+              </>
+            }
           </div>
         </div>
       </div>
