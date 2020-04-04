@@ -4,7 +4,9 @@ import Spinner from '../components/spinner'
 import AddEdit from './AddEdit'
 import GameEntry from '../models/GameEntry.model'
 import SearchBar from '../components/searchBar'
+import Tagger from '../components/tagger'
 import '../assets/styles/Admin.css'
+import '../hooks/useFetch'
 
 
 // redirect to Login if no token
@@ -55,6 +57,11 @@ const Admin = () => {
     }
   }
 
+  const setTaggerMode = () => {
+    setGames([])
+    setMode('tagger')
+  }
+
   const fetchAllGames = async () => {
     const res = await fetch('/api/games');
     const json = await res.json();
@@ -82,6 +89,8 @@ const Admin = () => {
                 onClick={() => setSearchMode('search')}>Search</span>
               <span className={`nav-item nav-link ${mode === 'browse' && 'active'}`}
                 onClick={() => setBrowseMode()}>Browse</span>
+              <span className={`nav-item nav-link ${mode === 'tagger' && 'active'}`}
+                onClick={() => setTaggerMode()}>Tagger</span>
             </nav>
             {
               mode === 'search' &&
@@ -90,6 +99,7 @@ const Admin = () => {
             { !loading && !!games.length &&
               <GameTable entries={games} action={ActionBtn} />
             }
+            <Tagger show={mode === 'tagger'}/>
             <div className="row">
               <div className="col-md-12 d-flex justify-content-center">
                 <Spinner show={loading}/>

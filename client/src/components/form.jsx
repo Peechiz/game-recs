@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import GameEntry from "../models/GameEntry.model";
 import Chip from "./chip";
 
@@ -20,7 +20,7 @@ const Form = ({ entry, onSubmit }) => {
       setHelpTags(json.map(tag => ({ name: tag, active: tags.includes(tag) })));
     };
     fetchHelpTags();
-  }, []);
+  }, [tags]);
 
   const removeTag = tag => setTags([...tags.filter(t => t !== tag)]);
 

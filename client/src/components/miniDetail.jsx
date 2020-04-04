@@ -3,7 +3,7 @@ import "../assets/styles/miniDetail.css";
 import Chip from "../components/chip";
 import Platform from "../components/platform";
 
-const MiniDetail = ({ entry }) => {
+const MiniDetail = ({ entry, click }) => {
   const { game } = entry;
 
   const [mouseOver, setMouseOver] = useState(false);
@@ -29,6 +29,7 @@ const MiniDetail = ({ entry }) => {
       className={`mini`}
       onMouseEnter={() => setMouseOver(true)}
       onMouseLeave={() => setMouseOver(false)}
+      onClick={() => click()}
     >
       {game.cover && (
         <img
@@ -58,12 +59,13 @@ const MiniDetail = ({ entry }) => {
                   <Platform
                     platform={p}
                     style={{
-                      marginLeft: 7,
-                      marginRight: 7,
+                      marginleft: 7,
+                      marginright: 7,
                       height: 25,
                       width: 25,
                       fill: "rgb(223, 223, 223)"
                     }}
+                    key={p.name}
                   />
                 );
               })}

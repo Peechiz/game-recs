@@ -3,7 +3,7 @@ import React from "react";
 const SearchBar = ({ search, setSearch, onSearch }) => {
 
   const onEnter = e => {
-    if (e.key === 'Enter' && search !== ''){
+    if (e.key === 'Enter' && search !== '') {
       onSearch();
     }
   }
@@ -18,9 +18,11 @@ const SearchBar = ({ search, setSearch, onSearch }) => {
         onChange={e => setSearch(e.target.value)}
         onKeyDown={e => onEnter(e)}
       />
-      <div className="input-group-append">
-        <button className="btn btn-primary" onClick={onSearch}>search</button>
-      </div>
+      { onSearch &&
+        <div className="input-group-append">
+          <button className="btn btn-primary" onClick={onSearch}>search</button>
+        </div>
+      }
     </div>
   );
 };

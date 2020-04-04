@@ -6,7 +6,7 @@ const GameDetail = ({ entry, back }) => {
 
   return (
     <div className="ctn">
-      <div className="card deets" style={{ width: "18rem" }}>
+      <div className="card deets">
         {
           !!back &&
           <button onClick={() => back()} type="button" className="btn btn-dark closeBtn" aria-label="Close">
@@ -17,7 +17,7 @@ const GameDetail = ({ entry, back }) => {
           <img src={game.cover.url} className="card-img-top" alt="logo2x" />
         )}
         <div className="card-body">
-          <h5 className="card-title">{game.name}</h5>
+          {/* <h5 className="card-title">{game.name}</h5> */}
           { game.time_to_beat && game.time_to_beat.normally && (
             <p>~{Math.round(game.time_to_beat.normally / 60 / 60)} hours</p>
           )}

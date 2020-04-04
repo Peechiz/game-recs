@@ -5,6 +5,10 @@ import Admin from './pages/Admin';
 import DetailPage from './pages/DetailPage';
 import Login from './pages/Login';
 import './assets/styles/App.css'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fas)
 
 
 const App = () => {
@@ -19,7 +23,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home}/>          
         <Route path="/admin" component={Admin}/>
-        <Route path="/game/:id" component={DetailPage}/>
+        <Route path="/games/:id" component={DetailPage}/>
         <Route path="/login" component={Login}/>
       </Switch>
     </Router>
