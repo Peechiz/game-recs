@@ -48,7 +48,7 @@ The `HOME` page is the landing intended for users that are not the admin.  The f
 Use the `search` bar to find games that you've played, and then click the `+` to create a new game entry.  Fill out the form and add tags to make the game searchable. Once you submit some games, you can browse them in `Browse` or edit tags in the `Tagger`.
 
 ## TODO
-- [ ] Admin Login
+- [ ] Admin Login / Secure API
 - [x] Add/Edit Games
 - [ ] Mobile styling for Display page
 - [ ] Add price information to Display page
