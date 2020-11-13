@@ -12,11 +12,12 @@ const DetailPage = () => {
 
   useEffect(() => {
     const fetchEntry = async () => {
-      console.log('FETCH GAME', id);
+      const game = await (await fetch(`/api/games/${id}`)).json();
+      const tags = await (await fetch(`/api/tags`)).json()
 
-      const res = await fetch(`/api/games/${id}`);
-      const json = await res.json();
-      setEntry(new GameEntry(json));
+      game.tags = game.tags.map(tagID => tags.find(tag => tag._id === tagID).name)
+
+      setEntry(new GameEntry(game));
     }
     fetchEntry();
   }, [id])
