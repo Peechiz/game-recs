@@ -5,21 +5,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Tagger = ({ show }) => {
   const [tags, setTags] = useState(null)
-  const [selectedTag, setSelectedTag] = useState(null)
   const { data, isLoading, err } = useFetch('/api/tags');
-  const tagMetaData = useFetch(selectedTag ? `api/tags/${selectedTag}` : null);
-  // const [tagDef, setTagDef] = useState('')
-  // const [tagIcon, setTagIcon] = useState('')
   const [deleteEnabled, setDeleteEnabled] = useState(false);
 
-  const initialTagMetaState = {
+  const initialSelectedTagState = {
     _id: null,
     name: '',
     icon: null,
     definition: ''
   };
 
-  const tagMetaReducer = (state, action) => {
+  const selectedTagReducer = (state, action) => {
 
     // needs more robust set/reset switch
     return {
@@ -30,33 +26,19 @@ const Tagger = ({ show }) => {
     }
   }
 
-  const [tagMetaState, dispatch ] = useReducer(tagMetaReducer, initialTagMetaState);
+  const [selectedTagState, dispatch ] = useReducer(selectedTagReducer, initialSelectedTagState);
 
   useEffect(() => {
     if (!!data) {
-      setTags(data.map(tag => ({ name: tag, active: false })))
+      setTags(data.map(tag => { tag.active = false; return tag }))
     }
   }, [data])
 
-  useEffect(() => {
-    // get tag data
-    console.log('existing', tagMetaData)
-    const { data } = tagMetaData;
-    if (data) {
-      dispatch({
-        _id: data._id,
-        name: data.name,
-        icon: data.icon,
-        definition: data.definition
-      })
-    }
-  },[tagMetaData])
-
-  const selectTag = name => {
+  const selectTag = t => {
     setTags(tags.map(tag => {
-      if (name === tag.name) {
+      if (t.name === tag.name) {
         tag.active = true
-        setSelectedTag(tag.name);
+        dispatch(tag);
       } else {
         tag.active = false
       }
@@ -64,17 +46,19 @@ const Tagger = ({ show }) => {
     }))
   }
 
-  const submitTagMetadata = () => {
-    fetch('/api/tags', {
+  const submitTag = () => {
+    const tag = tags.find(tag => tag.active);
+    const { active, ...tagData } = tag;
+    fetch(`/api/tags/${!!tag._id ? tag._id : ''}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(tagMetaState)
+      body: JSON.stringify(tagData)
     })
   }
 
-  const { icon, definition } = tagMetaState;
+  const { icon, definition, name } = selectedTagState;
 
   return (
     <>{show &&
@@ -85,14 +69,14 @@ const Tagger = ({ show }) => {
             <Chip key={tag.name}
               myClass={tag.active && 'btn-success'}
               noSpan={true}
-              action={() => selectTag(tag.name)}
+              action={() => selectTag(tag)}
             >{tag.name}</Chip>
           ))}
         </div>
         {
-          selectedTag &&
+          !!name &&
           <>
-            <h3>{selectedTag}</h3>
+            <h3>{name}</h3>
 
             <div className="d-flex">
               <div className="card bg-light mr-3 p-2" style={{width: 70, height: 70, placeItems: 'center'}}>
@@ -103,7 +87,7 @@ const Tagger = ({ show }) => {
                 }
               </div>
               <div className="form-group">
-                <label htmlFor="icon">Icon</label>
+                <label htmlFor="icon">FontAwesome Icon</label>
                 <input className="form-control" id="icon" type="text"
                   value={icon || ''}
                   onChange={e => dispatch({ icon: e.target.value })}
@@ -117,7 +101,7 @@ const Tagger = ({ show }) => {
               value={definition}
               onChange={e => dispatch({ definition: e.target.value})}
             />
-            <button onClick={submitTagMetadata} className="btn btn-primary mr-2">Submit</button>
+            <button onClick={submitTag} className="btn btn-primary mr-2">Submit</button>
             <button disabled={!deleteEnabled} className="btn btn-danger mr-2">Delete</button>
             <div className="form-check form-check-inline">
               <input className="form-check-input"

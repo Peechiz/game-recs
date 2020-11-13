@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const axios = require('axios').default;
-const { gameQueryBase, fixImg } = require('./queryUtils');
+const { gameQueryBase, fixImg } = require('../util/queryUtils');
 
 router.route('/:id')
   .get(

@@ -11,3 +11,5 @@
 --- scrape $$$ from each store's page?
 
 - button to update underlying game data from IGDB
+
+- dropdown to choose from more than one icon family for tag metadata?

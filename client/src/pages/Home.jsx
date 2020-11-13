@@ -14,24 +14,29 @@ const Home = ({ history }) => {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    const fetchTags = async () => {
-      const res = await fetch("/api/tags");
-      const json = await res.json();
-      const params = new URLSearchParams(location.search).get('tags')
-      let searchTags = [];
-      if (params) {
-        searchTags = params.split(',');
-      }
-      setTags(json.map(tag => ({ name: tag, active: searchTags.includes(tag) })));
-    }
+   
+    (async() => {
+      // GET TAGS
+        const foundTags = await (await fetch("/api/tags")).json();
+        const params = new URLSearchParams(location.search).get('tags')
+        let searchTags = [];
+        if (params) {
+          searchTags = params.split(',');
+        }
   
-    const fetchAllGames = async () => {
-      const res = await fetch("/api/games");
-      const json = await res.json();
-      setGames(json);
-    }
-    fetchTags();
-    fetchAllGames();
+        setTags(foundTags.map(tag => {
+          tag.active = searchTags.includes(tag.name);
+          return tag;
+        }));
+  
+      // GET GAMES
+        const foundGames = await (await fetch("/api/games")).json();
+        foundGames.map(game => {
+          game.tags = game.tags.map(tagID => foundTags.find(tag => tag._id === tagID))
+        })
+        setGames(foundGames);
+    })()
+
   }, [location.search]);
 
   const tagSort = (a,b) => a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1;
@@ -101,10 +106,10 @@ const Home = ({ history }) => {
             {
               // only games that include all active tags
               !!games.length && games.filter(
-                entry => tags.filter(t => t.active).every(t => entry.tags.includes(t.name))
+                entry => tags.filter(t => t.active).every(t => entry.tags.map(tag => tag.name).includes(t.name))
               ).filter(entry => entry.game.name.toLowerCase().includes(search.toLowerCase()) ).map(e => (
                 <MiniDetail key={e.game.id} entry={e} click={() => {
-                  console.log('boop');
+                  // console.log('boop');
                   history.push(`/games/${e._id}`)
                 }}/>
               ))

@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const Game = require('../../models/game.model')
+const Tag = require('../../models/tag.model')
 
 router.route('/')
   .post(async (req, res) => {
@@ -21,7 +22,10 @@ router.route('/')
   })
   .get(async (req, res) => {
     Game.find()
-      .then(games => res.json(games))
+      .then(games => {
+        const tags = await Tag.find();
+        res.json({games, tags})
+      })
       .catch(err => res.json({ message: err }));
   })
 

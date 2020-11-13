@@ -47,9 +47,9 @@ const MiniDetail = ({ entry, click }) => {
               <li className="mb-1">~{Math.round(game.time_to_beat.normally / 60 / 60)} hours</li>
             }
           </ul> */}
-          {entry.tags.map(tag => (
-            <Chip key={tag} noSpan={true}>
-              {tag}
+          {entry.tags.map(tag => tag.name).map(name => (
+            <Chip key={name} noSpan={true}>
+              {name}
             </Chip>
           ))}
           <div className="platforms">
