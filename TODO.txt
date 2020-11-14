@@ -1,3 +1,5 @@
+- confirm that new game subission tag bugs are fixed
+
 - admin login
 
 - add query option for filtering by precision at the root page

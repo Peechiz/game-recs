@@ -1,9 +1,27 @@
 const router = require("express").Router();
+const { create } = require("../../models/game.model");
 const Game = require('../../models/game.model')
 const Tag = require('../../models/tag.model')
 
 router.route('/')
   .post(async (req, res) => {
+
+    let { tags } = req.body;
+    const tagsToCreate = []
+    const tagIDs = tags.filter(tag => typeof tag === 'string')
+
+    tags.filter(tag => typeof tag !== 'string')
+      .forEach(tag => {
+        tagsToCreate.push(
+          Tag.create({ name: tag.name})
+        )
+      })
+    
+    const created = await Promise.all(tagsToCreate);
+    created.forEach(newTag => tagIDs.push(newTag._id))
+
+    req.body.tags = tagIDs;
+
     if (req.body._id) {
       Game.findByIdAndUpdate(req.body._id, req.body, {upsert: true})
       .then(() => res.sendStatus(200))

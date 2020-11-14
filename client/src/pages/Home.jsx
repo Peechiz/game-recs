@@ -11,11 +11,11 @@ const Home = ({ history }) => {
   const location = useLocation();
   const [tags, setTags] = useState();
   const [search, setSearch] = useState('')
-  const [games, setGames] = useState([]);
+  const [games, setGames] = useState(null);
 
   useEffect(() => {
    
-    (async() => {
+    (async () => {
       // GET TAGS
         const foundTags = await (await fetch("/api/tags")).json();
         const params = new URLSearchParams(location.search).get('tags')
@@ -30,10 +30,10 @@ const Home = ({ history }) => {
         }));
   
       // GET GAMES
-        const foundGames = await (await fetch("/api/games")).json();
-        console.log('games', foundGames)
-        foundGames.map(game => {
-          game.tags = game.tags.map(tagID => foundTags.find(tag => tag._id === tagID))
+        const foundEntries = await (await fetch("/api/games")).json()
+
+        foundEntries.forEach(entry => {
+          entry.tags = entry.tags.map(tagID => ({...foundTags.find(tag => tag._id === tagID)}))
         })
 
         const shuffle = (arr) => {
@@ -43,10 +43,10 @@ const Home = ({ history }) => {
               arr[i] = arr[j];
               arr[j] = temp;
           }
-          return arr
         }
-
-        setGames(shuffle(foundGames));
+        console.log(foundEntries)
+        // shuffle(foundEntries)
+        setGames(foundEntries);
     })()
 
   }, [location.search]);
@@ -120,10 +120,11 @@ const Home = ({ history }) => {
               !!games && games.filter(
                 entry => tags.filter(t => t.active).every(t => entry.tags.map(tag => tag.name).includes(t.name))
               ).filter(entry => entry.game.name.toLowerCase().includes(search.toLowerCase()) ).map(e => (
-                <MiniDetail key={e.game.id} entry={e} click={() => {
-                  // console.log('boop');
-                  history.push(`/games/${e._id}`)
-                }}/>
+                <MiniDetail 
+                  key={e._id}
+                  entry={e}
+                  click={() => history.push(`/games/${e._id}`)}
+                />
               ))
             }
             </div>

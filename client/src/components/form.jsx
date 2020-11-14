@@ -1,25 +1,34 @@
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
 import GameEntry from "../models/GameEntry.model";
 import Chip from "./chip";
+import useFetch from '../hooks/useFetch';
+import YouTubeEmbed from './youtubeEmbed';
 
 const Form = ({ entry, onSubmit }) => {
   const [tags, setTags] = useState(entry.tags);
-  const [helpTags, setHelpTags] = useState();
+  const [existingTags, setExistingTags] = useState([]);
   const [review, setReview] = useState(entry.review);
   const [tagInputText, setTagInputText] = useState("");
   const [precision, setPrecision] = useState(entry.precision || 3);
   const [whyPlay, setWhyPlay] = useState(entry.why);
   const [deleteEnabled, setDeleteEnabled] = useState(false);
+  const [selectedVideos, setSelectedVideos] = useState(entry.videos);
 
-  
+  const {
+    data: videos,
+    isLoading: isLoadingVideos,
+    err: errLoadingVideos
+  } = useFetch(`/api/video/${entry.game.id}`);
+
   useEffect(() => {
-    const fetchHelpTags = async () => {
-      const res = await fetch("/api/tags");
-      const json = await res.json();
-      setHelpTags(json.map(tag => ({ name: tag, active: tags.includes(tag) })));
-    };
-    fetchHelpTags();
+    (async () => {
+      const foundExistingTags = await(await fetch("/api/tags")).json();
+      setExistingTags(foundExistingTags.map(tag => {
+        tag.active = tags.map(t => t.name).includes(tag.name);
+        return tag 
+      }));
+      console.log('found', foundExistingTags)
+    })()
   }, [tags]);
 
   const removeTag = tag => setTags([...tags.filter(t => t !== tag)]);
@@ -38,6 +47,15 @@ const Form = ({ entry, onSubmit }) => {
   const tagSort = (a, b) =>
     a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1;
 
+  const toggleIncludeVideo = (vid) => {
+    console.log(selectedVideos)
+    if (selectedVideos.map(v => v.video_id).includes(vid.video_id)){
+      setSelectedVideos(selectedVideos.filter(v => v.video_id !== vid.video_id))
+    } else {
+      setSelectedVideos([...selectedVideos, vid])
+    }
+  }
+
   const submitForm = async () => {
     await fetch(`/api/games`, {
       method: "POST",
@@ -49,7 +67,12 @@ const Form = ({ entry, onSubmit }) => {
           _id: entry._id,
           game: entry.game,
           why: whyPlay,
-          tags,
+          videos: selectedVideos.map(v => ({ name: v.name, video_id: v.video_id })),
+          tags: tags.map(
+            tagName => existingTags.map(t => t.name).includes(tagName) ?
+              existingTags.find(tag => tag.name === tagName)._id :
+              { name: tagName }
+          ),
           review,
           precision,
         })
@@ -140,6 +163,34 @@ const Form = ({ entry, onSubmit }) => {
             </div>
           </div>
 
+          <div className="form-group">
+            <label htmlFor="videos">Videos</label>
+            <div className="d-flex">
+              {
+                isLoadingVideos && <span>Loading...</span>
+              }
+              {
+                videos && <>
+                  { videos.map(v => (
+                    <div key={v.video_id} className="mr-3">
+                      <div className="border border-dark d-flex align-items-center">
+                        <input type="checkbox"className="mx-2"
+                          value={
+                            selectedVideos.map(vid => vid.video_id).includes(v.video_id)
+                          }
+                          onChange={() => toggleIncludeVideo(v)}
+                        />
+                        <YouTubeEmbed id={v.video_id}
+                          styles={{ borderLeft: '1px solid black'}}/>
+                      </div>
+                        <p className="font-weight-light">{v.name}</p>
+                    </div>
+                  ))}
+                </>
+              }
+            </div>
+          </div>
+
           {/* ACTIONS */}
           <div className="form-group">
             <button onClick={() => submitForm()} className="btn btn-primary">
@@ -170,8 +221,8 @@ const Form = ({ entry, onSubmit }) => {
       <div className="col-md-4">
         <h1>tags</h1>
         {// inactive tags
-          helpTags &&
-          helpTags
+          existingTags &&
+          existingTags
             .sort(tagSort)
             .filter(tag => !tag.active)
             .map(tag => (

@@ -5,7 +5,8 @@ const GameSchema = new mongoose.Schema({
   review: String,
   tags: [String],
   why: String,
-  precision: Number
+  precision: Number,
+  videos: [{ name: String, video_id: String }]
 })
 
 module.exports = mongoose.model("Game", GameSchema)
