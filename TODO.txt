@@ -1,6 +1,5 @@
 - admin login
 
-- random shuffle main page games
 - add query option for filtering by precision at the root page
   - maybe place above the tags in the sidebar, make tags collapsable?
 
