@@ -31,10 +31,22 @@ const Home = ({ history }) => {
   
       // GET GAMES
         const foundGames = await (await fetch("/api/games")).json();
+        console.log('games', foundGames)
         foundGames.map(game => {
           game.tags = game.tags.map(tagID => foundTags.find(tag => tag._id === tagID))
         })
-        setGames(foundGames);
+
+        const shuffle = (arr) => {
+          for (let i = arr.length - 1; i > 0; i--) {
+              let j = Math.floor(Math.random() * (i + 1));
+              let temp = arr[i];
+              arr[i] = arr[j];
+              arr[j] = temp;
+          }
+          return arr
+        }
+
+        setGames(shuffle(foundGames));
     })()
 
   }, [location.search]);
@@ -105,7 +117,7 @@ const Home = ({ history }) => {
             <div className="flex d-flex flex-wrap grid">
             {
               // only games that include all active tags
-              !!games.length && games.filter(
+              !!games && games.filter(
                 entry => tags.filter(t => t.active).every(t => entry.tags.map(tag => tag.name).includes(t.name))
               ).filter(entry => entry.game.name.toLowerCase().includes(search.toLowerCase()) ).map(e => (
                 <MiniDetail key={e.game.id} entry={e} click={() => {

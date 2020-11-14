@@ -20,11 +20,10 @@ router.route('/')
       })
     }    
   })
-  .get(async (req, res) => {
+  .get((req, res) => {
     Game.find()
-      .then(games => {
-        const tags = await Tag.find();
-        res.json({games, tags})
+      .then( async (games) => {
+        res.json(games)
       })
       .catch(err => res.json({ message: err }));
   })
