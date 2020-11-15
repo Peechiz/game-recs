@@ -22,6 +22,7 @@ Sign up for a a free dev account with [Twitch](https://dev.twitch.tv/), and add 
 ```
 CLIENT_ID=<twitch client id>
 CLIENT_SECRET=<twitch client secret>
+K=<JSON array of SECRET CODE INPUTS TO GET TO THE LOGIN PAGE I WAS FEELING EXTRA TODAY>
 ```
 
 ## Usage

@@ -6,12 +6,15 @@ import MiniDetail from "../components/miniDetail";
 import { ReactComponent as ShareIcon } from 'bootstrap-icons/icons/upload.svg'
 import '../assets/styles/home.css';
 import copy from 'copy-to-clipboard';
+import useKonami from '../hooks/useKonami';
 
 const Home = ({ history }) => {
   const location = useLocation();
   const [tags, setTags] = useState();
   const [search, setSearch] = useState('')
   const [games, setGames] = useState(null);
+
+  useKonami(history);
 
   useEffect(() => {
    
@@ -44,8 +47,7 @@ const Home = ({ history }) => {
               arr[j] = temp;
           }
         }
-        console.log(foundEntries)
-        // shuffle(foundEntries)
+        shuffle(foundEntries)
         setGames(foundEntries);
     })()
 

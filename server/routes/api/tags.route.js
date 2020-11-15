@@ -1,27 +1,27 @@
 const router = require("express").Router();
 const Game = require('../../models/game.model');
-const Tags = require('../../models/tag.model');
+const Tag = require('../../models/tag.model');
 
 
 router.route('/')
   .get(async (req,res) => {
-    const tags = await Tags.find();
+    const tags = await Tag.find();
     res.json(tags);
   })
   .post(async (req, res) => {
-    if (req.body._id){
+    if (req.body._id) {
       Tag.findByIdAndUpdate(req.body._id, req.body, {upsert: true})
       .then(() => res.sendStatus(200))
       .catch(err => {
         console.log(err);
-        sendStatus(500);
+        res.sendStatus(500);
       })
     } else {
       Tag.create(req.body)
       .then(() => res.sendStatus(200))
       .catch(err => {
         console.log(err);
-        sendStatus(500);
+        res.sendStatus(500);
       })
     }
   })
