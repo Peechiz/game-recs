@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from 'react'
+import { useEffect, useReducer, useState } from 'react'
 
 const useFetch = (url, options) => {
 
@@ -7,6 +7,10 @@ const useFetch = (url, options) => {
     err: false,
     isLoading: false
   };
+
+  const [refetchIndex, setRefetchIndex] = useState(0);
+
+  const refetch = () => setRefetchIndex(prev => prev + 1)
 
   const fetchReducer = (state, action) => {
     return {
@@ -21,7 +25,7 @@ const useFetch = (url, options) => {
   
 
   useEffect(() => {
-    const fetchTags = async () => {
+    (async () => {
       dispatch({ isLoading: true });
       if (!url) return;
       try {
@@ -31,12 +35,11 @@ const useFetch = (url, options) => {
       } catch (e) {
         dispatch({ err: e})
       } 
-    }
-    fetchTags();
-  }, [url, options])
+    })()
+  }, [url, options, refetchIndex])
 
 
-  return state
+  return {...state, refetch}
 }
 
 export default useFetch;
