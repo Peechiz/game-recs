@@ -5,14 +5,13 @@ import useFetch from '../hooks/useFetch';
 import YouTubeEmbed from './youtubeEmbed';
 
 const Form = ({ entry, onSubmit }) => {
-  const [tags, setTags] = useState(entry.tags);
-  const [existingTags, setExistingTags] = useState([]);
+  const [tags, setTags] = useState([]);
   const [review, setReview] = useState(entry.review);
   const [tagInputText, setTagInputText] = useState("");
   const [precision, setPrecision] = useState(entry.precision || 3);
   const [whyPlay, setWhyPlay] = useState(entry.why);
   const [deleteEnabled, setDeleteEnabled] = useState(false);
-  const [selectedVideos, setSelectedVideos] = useState(entry.videos);
+  const [gameVideos, setGameVideos] = useState(entry.videos);
 
   const {
     data: videos,
@@ -21,62 +20,79 @@ const Form = ({ entry, onSubmit }) => {
   } = useFetch(`/api/video/${entry.game.id}`);
 
   useEffect(() => {
+    if (!!videos) {
+      setGameVideos(gameVideos => [...gameVideos, ...videos.filter(v => !gameVideos.map(v => v.video_id).includes(v.video_id)) ])
+    }
+  }, [videos])
+
+  useEffect(() => {
     (async () => {
       const foundExistingTags = await(await fetch("/api/tags")).json();
-      setExistingTags(foundExistingTags.map(tag => {
-        tag.active = tags.map(t => t.name).includes(tag.name);
+      setTags(foundExistingTags.map(tag => {
+        tag.active = entry.tags.includes(tag._id);
         return tag 
       }));
-      console.log('found', foundExistingTags)
     })()
-  }, [tags]);
+    setGameVideos(gameVideos => [...gameVideos.map(v => { v.active = true; return v })])
+  }, [entry.tags]);
 
-  const removeTag = tag => setTags([...tags.filter(t => t !== tag)]);
 
-  const addTags = () => {
-    const newTags = tagInputText.split(",").map(tag => tag.trim());
-
-    setTags(Array.from(new Set([...tags, ...newTags])));
-    setTagInputText("");
-  };
-
-  const addTag = tag => {
-    setTags(Array.from(new Set([...tags, tag])));
-  };
-
-  const tagSort = (a, b) =>
-    a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1;
-
-  const toggleIncludeVideo = (vid) => {
-    console.log(selectedVideos)
-    if (selectedVideos.map(v => v.video_id).includes(vid.video_id)){
-      setSelectedVideos(selectedVideos.filter(v => v.video_id !== vid.video_id))
+  const removeTag = tag => {
+    if (!!tag._id) {
+      setTags([...tags.map(t => {
+        if (t._id === tag._id) {
+          t.active = false
+        }
+        return t
+      })])
     } else {
-      setSelectedVideos([...selectedVideos, vid])
+      setTags([...tags.filter(t => t.name !== tag.name)])
     }
   }
 
+  const addTag = tagName => {
+    setTags([...tags.map(tag => {
+      if (tag.name === tagName) {
+        tag.active = true;
+      }
+      return tag
+    })])
+  };
+
+  const addTags = () => {
+    const newTags = tagInputText.split(",").map(tag => tag.trim());
+    setTags([...tags, ...newTags.map(tagName => ({ name: tagName, active: true }))])
+    setTagInputText("");
+  };
+  
+  const tagSort = (a, b) =>
+    a.name.toUpperCase() < b.name.toUpperCase() ? -1 : 1;
+
+  const toggleSelectVideo = video_id => {
+    setGameVideos([...gameVideos.map(v => {
+      if (v.video_id === video_id) {
+        v.active = !v.active
+      }
+      return v
+    })])
+  }
+
   const submitForm = async () => {
+    const newEntry = new GameEntry({
+      _id: entry._id,
+      game: entry.game,
+      why: whyPlay,
+      videos: gameVideos.filter(v => v.active).map(v => ({ name: v.name, video_id: v.video_id })),
+      tags: tags.filter(t => t.active).map(tag => !!tag._id ? tag._id : tag),
+      review,
+      precision,
+    })
     await fetch(`/api/games`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(
-        new GameEntry({
-          _id: entry._id,
-          game: entry.game,
-          why: whyPlay,
-          videos: selectedVideos.map(v => ({ name: v.name, video_id: v.video_id })),
-          tags: tags.map(
-            tagName => existingTags.map(t => t.name).includes(tagName) ?
-              existingTags.find(tag => tag.name === tagName)._id :
-              { name: tagName }
-          ),
-          review,
-          precision,
-        })
-      )
+      body: JSON.stringify(newEntry)
     });
     onSubmit();
   };
@@ -155,9 +171,9 @@ const Form = ({ entry, onSubmit }) => {
 
             {/* TAG SELECTION*/}
             <div className="input-group">
-              {tags.map(tag => (
-                <Chip key={tag} action={() => removeTag(tag)} isRemove={true}>
-                  {tag}
+              {tags.filter(tag => tag.active).map(tag => (
+                <Chip key={tag.name} action={() => removeTag(tag)} isRemove={true}>
+                  {tag.name}
                 </Chip>
               ))}
             </div>
@@ -165,28 +181,31 @@ const Form = ({ entry, onSubmit }) => {
 
           <div className="form-group">
             <label htmlFor="videos">Videos</label>
-            <div className="d-flex">
+            <div className="d-flex flex-wrap">
               {
                 isLoadingVideos && <span>Loading...</span>
               }
               {
-                videos && <>
-                  { videos.map(v => (
+                gameVideos && <>
+                  { gameVideos.map(v => (
                     <div key={v.video_id} className="mr-3">
                       <div className="border border-dark d-flex align-items-center">
                         <input type="checkbox"className="mx-2"
-                          value={
-                            selectedVideos.map(vid => vid.video_id).includes(v.video_id)
+                          checked={
+                            !!gameVideos.find(vid => v.video_id === vid.video_id).active
                           }
-                          onChange={() => toggleIncludeVideo(v)}
+                          onChange={() => toggleSelectVideo(v.video_id)}
                         />
                         <YouTubeEmbed id={v.video_id}
                           styles={{ borderLeft: '1px solid black'}}/>
                       </div>
-                        <p className="font-weight-light">{v.name}</p>
+                      <p className="font-weight-light">{v.name}</p>
                     </div>
                   ))}
                 </>
+              }
+              {
+                errLoadingVideos && <p>Couldn't find any videos...</p>
               }
             </div>
           </div>
@@ -221,8 +240,8 @@ const Form = ({ entry, onSubmit }) => {
       <div className="col-md-4">
         <h1>tags</h1>
         {// inactive tags
-          existingTags &&
-          existingTags
+          tags &&
+          tags
             .sort(tagSort)
             .filter(tag => !tag.active)
             .map(tag => (

@@ -10,7 +10,6 @@ const useKonami = (history) => {
   useEffect(() => {
     (async () => {
       if (keyCache.length > 10 && keyCache[keyCache.length - 1] === 'Enter') {
-        console.log('code', keyCache)
         const { code } = await (await fetch('/api/k', {
           method: 'POST',
           headers: {

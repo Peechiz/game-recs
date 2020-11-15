@@ -7,7 +7,7 @@ const MiniDetail = ({ entry, click }) => {
   const { game } = entry;
 
   const [mouseOver, setMouseOver] = useState(false);
-
+  
   const uniquePlatforms = (arr, platform) => {
     const { name } = platform;
 
@@ -47,9 +47,9 @@ const MiniDetail = ({ entry, click }) => {
               <li className="mb-1">~{Math.round(game.time_to_beat.normally / 60 / 60)} hours</li>
             }
           </ul>
-          {entry.tags.map(tag => tag.name).map(name => (
-            <Chip key={name} noSpan={true}>
-              {name}
+          {entry.tags.map(tag => (
+            <Chip key={`${entry._id}-${tag._id}`} noSpan={true}>
+              {tag.name}
             </Chip>
           ))}
           <div className="platforms">

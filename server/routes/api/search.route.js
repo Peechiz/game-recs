@@ -28,7 +28,6 @@ function searchRoute(app) {
                   return art;
                 })
               }
-              // console.log(game)
               return game;
             }))
           })

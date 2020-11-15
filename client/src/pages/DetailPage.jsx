@@ -5,8 +5,9 @@ import GameDetail from '../components/gameDetail';
 import { getJumboSrc } from "../util/util";
 import Precision from '../components/precision';
 import Chip from '../components/chip';
+import YouTubeEmbed from '../components/youtubeEmbed';
 
-const DetailPage = () => {
+const DetailPage = ({ history }) => {
   const { id } = useParams();
   const [entry, setEntry] = useState(null);
 
@@ -24,8 +25,7 @@ const DetailPage = () => {
 
   let game;
   if (entry) {
-    console.log(entry)
-    game = entry.game;
+    ({ game } = entry);
   }
 
   return (
@@ -39,7 +39,7 @@ const DetailPage = () => {
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-3">
-                <GameDetail entry={entry} back={() => {}} />
+                <GameDetail entry={entry} back={() => history.push(`/`)} />
               </div>
               <div className="col-md-7 col-sm-12">
                 <h1>{ game.name }</h1>
@@ -48,7 +48,18 @@ const DetailPage = () => {
                 <p>{ entry.review }</p>
                 <h3>Why should I play it?</h3>
                 <p>{ entry.why }</p>
-                <p>{ entry.tags.map(tag => <Chip action={null} style={{cursor: 'default !important'}} noSpan={true}>{tag}</Chip>) }</p>
+                <p>{ entry.tags.map(tag => <Chip key={tag} action={null} style={{cursor: 'default !important'}} noSpan={true}>{tag}</Chip>) }</p>
+                <div className="d-flex">
+                {
+                  !!entry.videos && !!entry.videos.length &&
+                  entry.videos.map(v => (
+                      <div className="mr-2">
+                        <YouTubeEmbed key={v.video_id} id={v.video_id}/>
+                        <p className="font-weight-light">{v.name}</p>
+                      </div>
+                  ))
+                }
+                </div>
               </div>
             </div>
           </div>
