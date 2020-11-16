@@ -1,6 +1,6 @@
 # Dude, You Totally Have to Play...
 
-A tag-based game library for sharing the junk I liked playing
+A tag-based game library for sharing the junk I liked playing, based on [Internet Game Database (IGDB)](https://www.igdb.com/).
 
 ![https://github.com/Peechiz/game-recs/blob/readme/DYTHTP_splash.jpg](https://github.com/Peechiz/game-recs/blob/readme/DYTHTP_splash.jpg)
 
