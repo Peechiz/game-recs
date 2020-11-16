@@ -32,9 +32,22 @@
   height: 100%;
 }
 
-.info:hover {
-  opacity: 1;
-  backdrop-filter: blur(7px) brightness(25%);;
+/* if backdrop support: very transparent and blurred */
+@supports not ((-webkit-backdrop-filter: blur(7px) brightness(25%)) or (backdrop-filter: blur(7px) brightness(25%))) {
+  .info:hover {
+    opacity: .95;
+    /* backdrop-filter: blur(7px) brightness(25%); */
+    background-color: #111;
+  }
+}
+
+
+/* if backdrop support: very transparent and blurred */
+@supports ((-webkit-backdrop-filter: blur(7px) brightness(25%)) or (backdrop-filter: blur(7px) brightness(25%))) {
+  .info:hover {
+    opacity: 1;
+    backdrop-filter: blur(7px) brightness(40%);
+  }
 }
 
 .info li {
